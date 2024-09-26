@@ -2,17 +2,16 @@ package main.java.list.Ordenacao;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-public class OrdenacaoNumeros{
+public class OrdenacaoNumeros {
     private List<Integer> listNumeros;
 
-    public OrdenacaoNumeros(){
+    public OrdenacaoNumeros() {
         this.listNumeros = new ArrayList<>();
     }
 
-    public void adicionarNumero(int numero){
+    public void adicionarNumero(int numero) {
         this.listNumeros.add(numero);
     }
 
@@ -28,7 +27,7 @@ public class OrdenacaoNumeros{
         return listDescendente;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         OrdenacaoNumeros ordenacaoNumeros = new OrdenacaoNumeros();
         ordenacaoNumeros.adicionarNumero(22);
         ordenacaoNumeros.adicionarNumero(4);

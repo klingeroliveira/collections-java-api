@@ -6,19 +6,19 @@ import java.util.List;
 public class ListaTarefas {
     private List<Tarefa> listaTarefas;
 
-    public ListaTarefas (){
+    public ListaTarefas() {
         listaTarefas = new ArrayList<>();
     }
 
-    public void adicionarTarefa(String descricao){
+    public void adicionarTarefa(String descricao) {
         listaTarefas.add(new Tarefa(descricao));
     }
 
-    public void removerTarefa(String descricao){
+    public void removerTarefa(String descricao) {
         List<Tarefa> listTarefasRemover = new ArrayList<>();
 
         for (Tarefa tarefa : listaTarefas) {
-            if (tarefa.getDescricao().equalsIgnoreCase(descricao)){
+            if (tarefa.getDescricao().equalsIgnoreCase(descricao)) {
                 listTarefasRemover.add(tarefa);
             }
         }
@@ -26,12 +26,12 @@ public class ListaTarefas {
         listaTarefas.removeAll(listTarefasRemover);
     }
 
-    public int obterNumeroTotalTarefa(){
+    public int obterNumeroTotalTarefa() {
 
         return listaTarefas.size();
     }
 
-    public void obterDescricaoTarefas(){
+    public void obterDescricaoTarefas() {
         System.out.println(listaTarefas);
     }
 
@@ -43,16 +43,16 @@ public class ListaTarefas {
         listaTarefas.adicionarTarefa("Tarefa 2");
         listaTarefas.adicionarTarefa("Tarefa 3");
 
-        System.out.println("Tarefas adicionadas: "); 
+        System.out.println("Tarefas adicionadas: ");
         listaTarefas.obterDescricaoTarefas();
-        
+
         System.out.println("Número total de tarefas: " + listaTarefas.obterNumeroTotalTarefa());
 
         listaTarefas.removerTarefa("TArefa 2");
 
-        System.out.println("Tarefas adicionadas: "); 
+        System.out.println("Tarefas adicionadas: ");
         listaTarefas.obterDescricaoTarefas();
-        
+
         System.out.println("Número total de tarefas: " + listaTarefas.obterNumeroTotalTarefa());
 
     }

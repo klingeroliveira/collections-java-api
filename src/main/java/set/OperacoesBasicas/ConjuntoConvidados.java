@@ -6,19 +6,19 @@ import java.util.Set;
 public class ConjuntoConvidados {
     private Set<Convidado> setConvidado;
 
-    public ConjuntoConvidados(){
+    public ConjuntoConvidados() {
         setConvidado = new HashSet<>();
     }
 
-    public void adicionarConvidado(String nome, int codigoConvite){
+    public void adicionarConvidado(String nome, int codigoConvite) {
         setConvidado.add(new Convidado(nome, codigoConvite));
     }
 
-    public void removerConvidadoPorCodigoConvite(int codigoConvite){
+    public void removerConvidadoPorCodigoConvite(int codigoConvite) {
         Convidado convidadoRemover = null;
 
-        for(Convidado convidado : setConvidado){
-            if(convidado.getCodigoConvite() == codigoConvite){
+        for (Convidado convidado : setConvidado) {
+            if (convidado.getCodigoConvite() == codigoConvite) {
                 convidadoRemover = convidado;
             }
         }
@@ -26,15 +26,15 @@ public class ConjuntoConvidados {
         setConvidado.remove(convidadoRemover);
     }
 
-    public int contarConvidados(){
+    public int contarConvidados() {
         return setConvidado.size();
     }
 
-    public void exibirConvidados(){
+    public void exibirConvidados() {
         System.out.println(setConvidado);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
 
         conjuntoConvidados.adicionarConvidado("Maria", 123);

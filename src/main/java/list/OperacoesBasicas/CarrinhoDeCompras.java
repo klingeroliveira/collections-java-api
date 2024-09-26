@@ -7,19 +7,19 @@ public class CarrinhoDeCompras {
 
     private List<Item> listaItens;
 
-    public CarrinhoDeCompras(){
+    public CarrinhoDeCompras() {
         this.listaItens = new ArrayList<>();
     }
 
-    public void adicionarItem(String nome, double preco, int quantidade){
+    public void adicionarItem(String nome, double preco, int quantidade) {
         this.listaItens.add(new Item(nome, preco, quantidade));
     }
 
-    public void removerItem(String nome){
+    public void removerItem(String nome) {
         List<Item> listaItemsRemover = new ArrayList<>();
 
         for (Item item : listaItens) {
-            if (item.getNome().equals(nome)){
+            if (item.getNome().equals(nome)) {
                 listaItemsRemover.add(item);
             }
         }
@@ -27,7 +27,7 @@ public class CarrinhoDeCompras {
         listaItens.removeAll(listaItemsRemover);
     }
 
-    public double calcularValorTotal(){
+    public double calcularValorTotal() {
         double total = 0.0;
 
         for (Item item : listaItens) {
@@ -37,7 +37,7 @@ public class CarrinhoDeCompras {
         return total;
     }
 
-    public void exibirItens(){
+    public void exibirItens() {
         if (listaItens.size() > 0) {
             System.out.println("Itens adicionados ao carrinho: ");
             System.out.println(listaItens);
@@ -57,12 +57,12 @@ public class CarrinhoDeCompras {
         carrinhoDeCompras.adicionarItem("Headset", 100, 1);
 
         carrinhoDeCompras.exibirItens();
-        System.out.println("Valor total do carrinho: "+ carrinhoDeCompras.calcularValorTotal());
+        System.out.println("Valor total do carrinho: " + carrinhoDeCompras.calcularValorTotal());
 
         carrinhoDeCompras.removerItem("Mouse");
 
         carrinhoDeCompras.exibirItens();
-        System.out.println("Valor total do carrinho: "+ carrinhoDeCompras.calcularValorTotal());
+        System.out.println("Valor total do carrinho: " + carrinhoDeCompras.calcularValorTotal());
 
     }
 }

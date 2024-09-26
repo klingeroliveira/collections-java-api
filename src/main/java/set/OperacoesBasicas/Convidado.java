@@ -6,7 +6,7 @@ public class Convidado {
     private String nome;
     private int codigoConvite;
 
-    public Convidado(String nome, int codigoConvite){
+    public Convidado(String nome, int codigoConvite) {
         this.nome = nome;
         this.codigoConvite = codigoConvite;
     }
@@ -19,6 +19,7 @@ public class Convidado {
         return this.codigoConvite;
     }
 
+    //region - equals() and hasCode(), método de comparação para inserção, bloqueia duplicidade de dados
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -31,6 +32,7 @@ public class Convidado {
     public int hashCode() {
         return Objects.hashCode(codigoConvite);
     }
+    //endregion
 
     @Override
     public String toString() {
