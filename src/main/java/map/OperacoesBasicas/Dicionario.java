@@ -19,7 +19,7 @@ public class Dicionario {
 
         boolean palavraExiste = pesquisarPorPalavra(palavra) != null;
 
-        if (!palavraExiste || (palavraExiste && atualizaDefinicao)) {
+        if (!palavraExiste || atualizaDefinicao) {
             dicionarioMap.put(palavra, definicao);
             System.out.println("Palavra '" + palavra + "' adicionada/atualizada!");
         } else {
